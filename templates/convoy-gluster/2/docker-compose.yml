@@ -11,12 +11,12 @@ convoy-gluster:
     - /etc/docker/plugins:/etc/docker/plugins
   external_links:
     - "${GLUSTERFS_SERVICE}:glusterfs"
-  image: mstaicu/convoy-agent:v0.13.0-pre
+  image: mstaicu/convoy-agent:v0.13.0-pre2
 
 convoy-gluster-storagepool:
   labels:
     io.rancher.container.create_agent: 'true'
   volumes:
     - /var/run:/host/var/run
-  image: mstaicu/convoy-agent:v0.13.0-pre
+  image: mstaicu/convoy-agent:v0.13.0-pre2
   command: storagepool-agent
