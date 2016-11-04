@@ -12,6 +12,7 @@ convoy-gluster:
   external_links:
     - "${GLUSTERFS_SERVICE}:glusterfs"
   image: mstaicu/convoy-agent:v1
+  command: volume-agent-glusterfs
 
 convoy-gluster-storagepool:
   labels:
@@ -19,3 +20,4 @@ convoy-gluster-storagepool:
   volumes:
     - /var/run:/host/var/run
   image: mstaicu/convoy-agent:v1
+  command: storagepool-agent
