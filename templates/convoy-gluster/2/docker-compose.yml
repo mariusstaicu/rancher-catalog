@@ -17,6 +17,7 @@ convoy-gluster:
 convoy-gluster-storagepool:
   labels:
     io.rancher.container.create_agent: 'true'
+    io.rancher.scheduler.global: 'true'
   volumes:
     - /var/run:/host/var/run
   image: mstaicu/convoy-agent:v3
